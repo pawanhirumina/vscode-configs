@@ -1,0 +1,33 @@
+{
+    "window.titleBarStyle": "custom",
+    "workbench.enableAnimations": false,
+    "workbench.startupEditor": "none",
+    "remote.portsAttributes": {
+        "3010": {
+            "protocol": "https"
+        }
+    },
+    "explorer.compactFolders": false,
+    "js/ts.suggest.enabled": false,
+    "files.autoSave": "afterDelay",
+    "editor.wordWrap": "on",
+    "editor.formatOnSave": true,
+    "emmet.showSuggestionsAsSnippets": true,
+    "editor.snippetSuggestions": "top",
+    "editor.tabCompletion": "on",
+    "emmet.includeLanguages": {
+        "javascript": "javascriptreact",
+        "typescript": "typescriptreact"
+    },
+    "files.associations": {
+        "*.js": "javascript",
+        "*.jsx": "javascriptreact"
+    },
+    "js/ts.updateImportsOnFileMove.enabled": "always",
+    "js/ts.inlayHints.propertyDeclarationTypes.enabled": true,
+    "explorer.confirmDelete": false,
+    "workbench.iconTheme": "material-icon-theme",
+    "chat.viewSessions.orientation": "stacked",
+    "window.commandCenter": false,
+    "workbench.layoutControl.enabled": false
+}
