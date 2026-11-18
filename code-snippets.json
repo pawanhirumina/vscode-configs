@@ -1,0 +1,150 @@
+{
+    "Export Default Function Component": {
+        "prefix": "edf",
+        "scope": "javascript,javascriptreact,typescript,typescriptreact",
+        "body": [
+            "export default function ${TM_FILENAME_BASE}() {",
+            "    return (",
+            "        <>",
+            "            $1",
+            "        </>",
+            "    )",
+            "}",
+            "$0"
+        ],
+        "description": "Export default function component"
+    },
+    "useState": {
+        "prefix": "us",
+        "scope": "javascript,javascriptreact,typescript,typescriptreact",
+        "body": [
+            "const [${1:state}, set${1/(.*)/${1:/capitalize}/}] = useState(${2:''});",
+            "$0"
+        ],
+        "description": "useState hook"
+    },
+    "useEffect": {
+        "prefix": "ue",
+        "scope": "javascript,javascriptreact,typescript,typescriptreact",
+        "body": [
+            "useEffect(() => {",
+            "  $1",
+            "}, [${2:}]);",
+            "$0"
+        ],
+        "description": "useEffect hook"
+    },
+    "useRef": {
+        "prefix": "ur",
+        "scope": "javascript,javascriptreact,typescript,typescriptreact",
+        "body": [
+            "const ${1:ref} = useRef(${2:null});",
+            "$0"
+        ],
+        "description": "useRef hook"
+    },
+    "Array Range": {
+        "prefix": "range",
+        "scope": "javascript,javascriptreact,typescript,typescriptreact",
+        "body": [
+            "const ${1:numbers} = Array.from({ length: ${2:10} }, (_, i) => i + ${3:1});",
+            "$0"
+        ],
+        "description": "Create array 1 to N"
+    },
+    "Array Range 0 to N": {
+        "prefix": "range0",
+        "scope": "javascript,javascriptreact,typescript,typescriptreact",
+        "body": [
+            "const ${1:numbers} = [...Array(${2:10}).keys()];",
+            "$0"
+        ],
+        "description": "Create array 0 to N-1"
+    },
+    "Map List": {
+        "prefix": "map",
+        "scope": "javascript,javascriptreact,typescript,typescriptreact",
+        "body": [
+            "{${1:items}.map((${2:item}) => (",
+            "  <div key={${2:item}.${3:id}}>",
+            "    $4",
+            "  </div>",
+            "))}",
+            "$0"
+        ],
+        "description": "Map array to JSX"
+    },
+    "Fetch Data useEffect": {
+        "prefix": "fetch",
+        "scope": "javascript,javascriptreact,typescript,typescriptreact",
+        "body": [
+            "const [${1:data}, set${1/(.*)/${1:/capitalize}/}] = useState(${2:[]});",
+            "const [loading, setLoading] = useState(true);",
+            "",
+            "useEffect(() => {",
+            "  const getData = async () => {",
+            "    try {",
+            "      const res = await fetch('${3:https://api.example.com/data}');",
+            "      const json = await res.json();",
+            "      set${1/(.*)/${1:/capitalize}/}(json);",
+            "    } catch (err) {",
+            "      console.error(err);",
+            "    } finally {",
+            "      setLoading(false);",
+            "    }",
+            "  };",
+            "  getData();",
+            "}, []);",
+            "$0"
+        ],
+        "description": "Fetch data with useEffect"
+    },
+    "Conditional Render": {
+        "prefix": "cond",
+        "scope": "javascript,javascriptreact,typescript,typescriptreact",
+        "body": [
+            "{${1:condition} && (",
+            "  $2",
+            ")}",
+            "$0"
+        ],
+        "description": "Conditional render"
+    },
+    "onClick Handler": {
+        "prefix": "onclick",
+        "scope": "javascript,javascriptreact,typescript,typescriptreact",
+        "body": [
+            "onClick={() => ${1:handleClick}(${2:})}",
+            "$0"
+        ],
+        "description": "onClick handler"
+    },
+    "className": {
+        "prefix": "cln",
+        "scope": "javascript,javascriptreact,typescript,typescriptreact",
+        "body": [
+            "className=\"$1\""
+        ],
+        "description": "className attribute"
+    },
+    "Framer Motion div": {
+        "prefix": "fmd",
+        "scope": "javascript,javascriptreact,typescript,typescriptreact",
+        "body": [
+            "<motion.${1|div,span,button,img,a|}>",
+            "  $2",
+            "</motion.${1|div,span,button,img,a|}>"
+        ],
+        "description": "className attribute"
+    },
+    "AnimatePresence Wrapper": {
+        "prefix": "fmw",
+        "scope": "javascript,javascriptreact,typescript,typescriptreact",
+        "body": [
+            "<AnimatePresence mode=\"${1|wait,popLayout,sync|}\">",
+            "  $2",
+            "</AnimatePresence>"
+        ],
+        "description": "className attribute"
+    }
+}
